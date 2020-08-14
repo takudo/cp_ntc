@@ -1,12 +1,7 @@
 # 構築メモ
 
-## プロジェクト初期化
 
-```
-$ flutter create cp_ntc
-```
-
-## 今後のタスク
+## タスク
 
 - [ ] ガワづくり
     - [ ] navbar 
@@ -35,3 +30,9 @@ $ flutter create cp_ntc
 - [ ] 単体テスト
 
 - [ ] UI テスト
+
+## プロジェクト初期化
+
+```
+$ flutter create cp_ntc
+```
