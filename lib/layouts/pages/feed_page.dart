@@ -2,9 +2,7 @@ import 'package:cp_ntc/layouts/widgets/common_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class FeedPage extends StatefulWidget {
-  FeedPage({Key key, this.title}) : super(key: key);
-
-  final String title;
+  FeedPage({Key key}) : super(key: key);
 
   @override
   _FeedPageState createState() => _FeedPageState();
@@ -25,7 +23,7 @@ class _FeedPageState extends State<FeedPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("フィード"),
       ),
       body: Center(
         child: Column(

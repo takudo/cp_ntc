@@ -27,10 +27,10 @@ class _CommonBottomNavbarState extends State<CommonBottomNavbar> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          BottomNavBarButton(selected: _menuSelection.feedSelected, icon: Icon(Icons.assignment)),
-          BottomNavBarButton(selected: _menuSelection.activitySelected, icon: Icon(Icons.pie_chart_outlined)),
-          BottomNavBarButton(selected: _menuSelection.workoutSelected, icon: Icon(Icons.watch)),
-          BottomNavBarButton(selected: _menuSelection.mailTraySelected, icon: Icon(Icons.mail_outline)),
+          BottomNavBarButton(selected: _menuSelection.feedSelected, icon: Icon(Icons.assignment), routeName: '/feed',),
+          BottomNavBarButton(selected: _menuSelection.activitySelected, icon: Icon(Icons.pie_chart_outlined), routeName: '/activity',),
+          BottomNavBarButton(selected: _menuSelection.workoutSelected, icon: Icon(Icons.watch), routeName: '/workout',),
+          BottomNavBarButton(selected: _menuSelection.mailTraySelected, icon: Icon(Icons.mail_outline), routeName: '/mail_tray',),
         ],
       ),
     );
