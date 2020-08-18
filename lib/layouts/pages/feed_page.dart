@@ -1,3 +1,4 @@
+import 'package:cp_ntc/layouts/widgets/common_app_bar.dart';
 import 'package:cp_ntc/layouts/widgets/common_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,6 @@ class FeedPage extends StatefulWidget {
   @override
   _FeedPageState createState() => _FeedPageState();
 }
-
 
 class _FeedPageState extends State<FeedPage> {
   int _counter = 0;
@@ -22,8 +22,8 @@ class _FeedPageState extends State<FeedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("フィード"),
+      appBar: CommonAppBar(
+        "フィード"
       ),
       body: Center(
         child: Column(

@@ -1,3 +1,4 @@
+import 'package:cp_ntc/layouts/widgets/common_app_bar.dart';
 import 'package:cp_ntc/layouts/widgets/common_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +16,8 @@ class _MailTrayPageState extends State<MailTrayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("受信トレイ"),
+      appBar: CommonAppBar(
+        "受信トレイ",
       ),
       body: Center(
         child: Column(

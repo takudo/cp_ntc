@@ -1,3 +1,4 @@
+import 'package:cp_ntc/layouts/widgets/common_app_bar.dart';
 import 'package:cp_ntc/layouts/widgets/common_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,8 @@ class _ActivityPageState extends State<ActivityPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("アクティビティ"),
+      appBar: CommonAppBar(
+        "アクティビティ",
       ),
       body: Center(
         child: Column(
