@@ -13,6 +13,6 @@ class CommonAppBar extends AppBar {
         actions: <Widget>[
           IconButton(icon: Icon(Icons.bookmark_border), onPressed: () {  },)
         ],
-        bottom: bottom
-      );
+        bottom: bottom,
+    );
 }
