@@ -17,7 +17,7 @@ class _MailTrayPageState extends State<MailTrayPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CommonAppBar(
-        "受信トレイ",
+        title: "受信トレイ",
       ),
       body: Center(
         child: Column(

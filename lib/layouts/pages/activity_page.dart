@@ -16,7 +16,7 @@ class _ActivityPageState extends State<ActivityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CommonAppBar(
-        "アクティビティ",
+        title: "アクティビティ",
       ),
       body: Center(
         child: Column(

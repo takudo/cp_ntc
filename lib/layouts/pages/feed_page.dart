@@ -23,7 +23,7 @@ class _FeedPageState extends State<FeedPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CommonAppBar(
-        "フィード"
+          title: "フィード"
       ),
       body: Center(
         child: Column(

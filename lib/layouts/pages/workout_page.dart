@@ -15,18 +15,31 @@ class _WorkoutPageState extends State<WorkoutPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CommonAppBar(
-        "ワークアウト"
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        appBar: CommonAppBar(
+          title: "ワークアウト",
+          bottom: TabBar(
+            isScrollable: true,
+            tabs: [
+              Text('あなたにおすすめ'),
+              Text('見る'),
+              Text('コレクション'),
+              Text('プラン'),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            Text('あなたにおすすめ'),
+            Text('見る'),
+            Text('コレクション'),
+            Text('プラン'),
           ],
         ),
+        bottomNavigationBar: CommonBottomNavbar(_selectedIndex),
       ),
-      bottomNavigationBar: CommonBottomNavbar(_selectedIndex),
     );
   }
 }
