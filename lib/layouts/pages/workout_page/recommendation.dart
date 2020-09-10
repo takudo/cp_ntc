@@ -1,22 +1,26 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class RecommendationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _blockTitle('あなたへのおすすめ'),
+          _blockBody(),
+          _blockTitle('新着ワークアウト'),
+          _blockBody(),
+        ],
+      ),
+    )
 
-
-    return
-      Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _blockTitle('あなたへのおすすめ'),
-        _blockBody(),
-        _blockTitle('新着ワークアウト'),
-        _blockBody(),
-      ],
-    );
+      ;
 
   }
 
@@ -37,6 +41,7 @@ class RecommendationPage extends StatelessWidget {
   Widget _blockBody() {
     return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.symmetric(horizontal: 16),
         child: Row(
           children: [
             _blockTile(),
@@ -50,11 +55,25 @@ class RecommendationPage extends StatelessWidget {
   }
 
   Widget _blockTile() {
-    return Image.network(
-        'https://picsum.photos/250?image=9',
-        width: 250,
-        height: 350,
-        fit: BoxFit.fill
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 4),
+      child: Stack(
+        children: [
+          Image.network(
+            'https://picsum.photos/250?image=9',
+            width: 250,
+            height: 350,
+            fit: BoxFit.fill,
+          ),
+          Align(
+            alignment: Alignment(0, 1),
+            child: Container(
+              child: Text('イグニションポイント', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+            ),
+          ),
+        ],
+      )
+
     );
   }
 
